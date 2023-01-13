@@ -10,5 +10,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val dummyClass= RandomPasswordGenerator(true,true,true,18);
         println(dummyClass.randomID());
+        // test123
     }
 }
