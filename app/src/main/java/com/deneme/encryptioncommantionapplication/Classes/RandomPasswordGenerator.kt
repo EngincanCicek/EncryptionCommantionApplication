@@ -6,6 +6,9 @@ class RandomPasswordGenerator(
     containLowercaseLetter: Boolean,
     passwordsLenght: Int
 ) {
+    // Random password generation class. The parameters in it are about how many characters
+    // the password will have and what kind of characters it will consist of.
+
     val containNumbers = containNumber;
     val containUppercaseLetter = containUppercaseLetter;
     val containLowercaseLetter = containLowercaseLetter;
@@ -17,6 +20,7 @@ class RandomPasswordGenerator(
 
 
     private fun selectParameters(): MutableList<Char> {
+        // This method adds user selected options
         val selectedCharArray = mutableListOf<Char>();
 
         if (containNumbers) {
@@ -34,8 +38,10 @@ class RandomPasswordGenerator(
 
     }
 
-    private fun randomID(): String =
-        List(passwordsLenght) { selectParameters().random() }.joinToString("")
+    fun randomID(): String =
+        List(passwordsLenght) { selectParameters().random() }.joinToString("");
+    // This method return the password last
+
 
 
 }

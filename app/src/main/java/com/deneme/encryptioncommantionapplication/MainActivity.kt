@@ -2,11 +2,13 @@ package com.deneme.encryptioncommantionapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.deneme.encryptioncommantionapplication.Classes.RandomPasswordGenerator
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //This app just a random password generator and my first open resource kotlin app
+        val dummyClass= RandomPasswordGenerator(true,true,true,18);
+        println(dummyClass.randomID());
     }
 }
