@@ -1,15 +1,15 @@
 package com.deneme.encryptioncommantionapplication
 
+import RandomPasswordGenerator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.deneme.encryptioncommantionapplication.Classes.RandomPasswordGenerator
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val dummyClass= RandomPasswordGenerator(true,true,true,18);
-        println(dummyClass.randomID());
+        val dummyClass= RandomPasswordGenerator(true,true,true,8);
+        println("Passs test: "+dummyClass.generatePassword());
 
         supportActionBar?.hide();
 

@@ -1,47 +1,24 @@
-package com.deneme.encryptioncommantionapplication.Classes
+import kotlin.random.Random
 
 class RandomPasswordGenerator(
-    containNumber: Boolean,
-    containUppercaseLetter: Boolean,
-    containLowercaseLetter: Boolean,
-    passwordsLenght: Int
+    private val containNumber: Boolean,
+    private val containUppercaseLetter: Boolean,
+    private val containLowercaseLetter: Boolean,
+    private val passwordLength: Int
 ) {
-    // Random password generation class. The parameters in it are about how many characters
-    // the password will have and what kind of characters it will consist of.
+    private val charPool = mutableListOf<Char>()
 
-    val containNumbers = containNumber;
-    val containUppercaseLetter = containUppercaseLetter;
-    val containLowercaseLetter = containLowercaseLetter;
-    val passwordsLenght = passwordsLenght;
-
-    val lowercaseLetters = ('a'..'z').toMutableList();
-    val uppercaseLetters = ('A'..'Z').toMutableList();
-    val numbers = ('0'..'9').toMutableList();
-
-
-    private fun selectParameters(): MutableList<Char> {
-        // This method adds user selected options
-        val selectedCharArray = mutableListOf<Char>();
-
-        if (containNumbers) {
-            selectedCharArray.addAll(numbers);
-        }
-        if (containUppercaseLetter) {
-            selectedCharArray.addAll(uppercaseLetters);
-
-        }
-        if (containLowercaseLetter) {
-            selectedCharArray.addAll(lowercaseLetters);
-
-        }
-        return selectedCharArray;
-
+    init {
+        if (containNumber) charPool.addAll('0'..'9')
+        if (containUppercaseLetter) charPool.addAll('A'..'Z')
+        if (containLowercaseLetter) charPool.addAll('a'..'z')
     }
 
-    fun randomID(): String =
-        List(passwordsLenght) { selectParameters().random() }.joinToString("");
-    // This method return the password last
-
-
-
+    fun generatePassword(): String {
+        return buildString {
+            repeat(passwordLength) {
+                append(charPool[Random.nextInt(0, charPool.size)])
+            }
+        }
+    }
 }
