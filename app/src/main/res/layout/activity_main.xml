@@ -9,10 +9,67 @@
     android:background="@color/main_color"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="150dp"
-        app:srcCompat="@drawable/lock_pink" />
+        android:gravity="center"
+        android:padding="16dp">
+
+        <!-- Kilit logosu -->
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/lock_pink"/>
+
+        <!-- Checkboxlar -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <CheckBox
+                android:id="@+id/checkbox_uppercase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contain Uppercase Letters"
+                android:layout_marginStart="16dp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_lowercase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contain Lowercase Letters"
+                android:layout_marginStart="16dp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_numbers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="Contain Numbers"/>
+
+        </LinearLayout>
+
+        <!-- Password Length -->
+        <EditText
+            android:id="@+id/edittext_length"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password Length"
+            android:inputType="number"/>
+
+        <!-- Oluştur butonu -->
+        <Button
+            android:id="@+id/button_generate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/soft_pink"
+            android:textColor="@color/main_color"
+            android:text="Generate Password"/>
+
+    </LinearLayout> />
 </androidx.appcompat.widget.LinearLayoutCompat>
