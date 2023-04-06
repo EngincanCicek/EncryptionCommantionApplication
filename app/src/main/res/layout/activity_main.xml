@@ -71,5 +71,15 @@
             android:textColor="@color/main_color"
             android:text="Generate Password"/>
 
+        <TextView
+            android:id="@+id/textview_passwordoutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="password me!"
+            android:gravity="center"
+            android:layout_marginTop="32dp"
+            android:textSize="32sp"
+            android:textColor="@color/soft_pink"/>
+
     </LinearLayout> />
 </androidx.appcompat.widget.LinearLayoutCompat>
