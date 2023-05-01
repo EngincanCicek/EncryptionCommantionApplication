@@ -87,5 +87,5 @@
             android:textColor="@color/soft_pink"
             android:textSize="32sp" />
 
-    </LinearLayout> />
+    </LinearLayout>
 </androidx.appcompat.widget.LinearLayoutCompat>
