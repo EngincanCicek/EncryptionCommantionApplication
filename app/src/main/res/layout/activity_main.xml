@@ -18,10 +18,12 @@
 
         <!-- Kilit logosu -->
         <ImageView
+            android:id="@+id/imageview_lock"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/lock_pink"/>
+            android:layout_marginBottom="36dp"
+            android:src="@drawable/lock_pink" />
 
         <!-- Checkboxlar -->
         <LinearLayout
@@ -49,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:text="Contain Numbers"/>
+                android:text="Contain Numbers" />
 
         </LinearLayout>
 
@@ -57,9 +59,12 @@
         <EditText
             android:id="@+id/edittext_length"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48sp"
             android:hint="Password Length"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:text="Enter Password Lenght"
+            android:textAlignment="center"
+            android:textColor="@color/soft_pink" />
 
         <!-- Oluştur butonu -->
         <Button
@@ -68,18 +73,19 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:backgroundTint="@color/soft_pink"
+            android:text="Generate Password"
             android:textColor="@color/main_color"
-            android:text="Generate Password"/>
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textview_passwordoutput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="password me!"
-            android:gravity="center"
             android:layout_marginTop="32dp"
-            android:textSize="32sp"
-            android:textColor="@color/soft_pink"/>
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/soft_pink"
+            android:textSize="32sp" />
 
     </LinearLayout> />
 </androidx.appcompat.widget.LinearLayoutCompat>
