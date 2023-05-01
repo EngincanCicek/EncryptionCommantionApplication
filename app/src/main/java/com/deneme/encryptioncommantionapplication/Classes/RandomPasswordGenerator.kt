@@ -1,10 +1,10 @@
 import kotlin.random.Random
 
 class RandomPasswordGenerator(
-    private val containNumber: Boolean,
-    private val containUppercaseLetter: Boolean,
-    private val containLowercaseLetter: Boolean,
-    private val passwordLength: Int
+    private var containNumber: Boolean,
+    private var containUppercaseLetter: Boolean,
+    private var containLowercaseLetter: Boolean,
+    private var passwordLength: Int
 ) {
     private val charPool = mutableListOf<Char>()
 
